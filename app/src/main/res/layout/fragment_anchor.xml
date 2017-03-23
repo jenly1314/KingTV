@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_color">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="2dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civAvatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/mine_default_avatar"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/civAvatar"
+                    android:layout_toEndOf="@+id/civAvatar">
+                    <TextView
+                        android:id="@+id/tvAnchorName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="@string/text"
+                        android:padding="6dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/room_table_text_color"
+                            android:text="@string/account_"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:id="@+id/tvAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/room_table_text_color"
+                            android:text="@string/l"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/room_table_text_color"
+                            android:text="@string/fans_"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:id="@+id/tvFans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/room_table_text_color"
+                            android:text="@string/l"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/room_table_text_color"
+                            android:text="@string/zhandouli_"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:id="@+id/tvWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="11sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:textColor="@color/room_lable_title_color"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="@string/live_notice"
+                    android:textSize="14sp"
+                    android:drawableLeft="@drawable/img_zhibojian_shu_zhubo_tg"/>
+                <include layout="@layout/line_h"/>
+                <TextView
+                    android:id="@+id/tvStartLiveTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/room_lable_content_color"
+                    android:background="?android:attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="@string/personal_information"
+                    android:textSize="14sp"
+                    android:textColor="@color/room_lable_title_color"
+                    android:drawableLeft="@drawable/img_zhibojian_shu_zhubo_gerenziliao"/>
+                <include layout="@layout/line_h"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/age"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_color"/>
+                    <TextView
+                        android:id="@+id/tvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secrecy"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_content_color"/>
+                </LinearLayout>
+                <include layout="@layout/line_h"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/emotional_state"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_color"/>
+                    <TextView
+                        android:id="@+id/tvEmotionalState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secrecy"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_content_color"/>
+                </LinearLayout>
+                <include layout="@layout/line_h"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/location"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_color"/>
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/outer_space"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_content_color"/>
+                </LinearLayout>
+
+                <include layout="@layout/line_h"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:background="?android:attr/selectableItemBackground">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/occupation"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_color"/>
+                    <TextView
+                        android:id="@+id/tvOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/secrecy"
+                        android:textSize="14sp"
+                        android:textColor="@color/room_lable_content_color"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

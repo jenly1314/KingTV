@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.neenbedankt.android-apt'
+apply from: 'tinker-support.gradle'
+
+android {
+
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.king.tv"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'armeabi-v7a'//, 'x86', 'x86_64', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+greendao{
+    schemaVersion 1
+    targetGenDir 'src/main/java'
+    daoPackage 'com.king.tv.dao.greendao'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.1.+'
+    compile 'com.android.support:design:24.2.+'
+    compile 'com.android.support:cardview-v7:24.1.+'
+    testCompile 'junit:junit:4.12'
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
+    compile 'com.hannesdorfmann.mosby:viewstate:2.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.jude:easyrecyclerview:4.3.7'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.google.dagger:dagger:2.9'
+    //    annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
+    apt 'com.google.dagger:dagger-compiler:2.9'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'org.greenrobot:greendao:3.2.0'
+    provided 'org.greenrobot:greendao-generator:3.2.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.king.base:base:2.0'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.qiniu:happy-dns:0.2.+'
+    //optional, help to generate the final applicatio
+
+    //    provided('com.tencent.tinker:tinker-android-anno:1.7.7')
+
+    //tinker's main Android lib
+
+    //    compile 'com.tencent.tinker:tinker-android-lib:1.7.7'
+    // 多dex配置
+    compile 'com.android.support:multidex:1.0.1'
+    //sdk
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //ndk
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+
+}
+

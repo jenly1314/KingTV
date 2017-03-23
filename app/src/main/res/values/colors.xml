@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#FB5553</color>
+    <color name="colorAccent">#FB5553</color>
+
+
+    <color name="tab_text_color_normal">#A7A7A7</color>
+    <color name="tab_text_color_selected">#FB5553</color>
+    <color name="progress_color">#FB5553</color>
+    <color name="bg_red_color">#FB5553</color>
+    <color name="bg_red_color_pressed">#FFEEF0</color>
+
+    <color name="room_table_text_color">#808080</color>
+    <color name="room_lable_title_color">#333333</color>
+    <color name="room_lable_color">#999999</color>
+    <color name="room_lable_content_color">#666666</color>
+
+    <color name="progressBarColor">#7fFB5553</color>
+
+    <color name="text_error_color">#7f000000</color>
+
+    <color name="third_party_text_color">#999999</color>
+
+    <color name="default_bg_color">#f0f0f0</color>
+    <color name="room_edit_bg">#f8f8f8</color>
+    <color name="title_bg_color">#fafafa</color>
+    <color name="mine_follower_bg">#1f000000</color>
+    <color name="line_bg">#e5e5e5</color>
+</resources>

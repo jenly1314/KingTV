@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">KingTV</string>
+
+    <string name="text">text</string>
+    <string name="welcome_tips">做年轻人爱看的直播</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_live">直播</string>
+    <string name="tab_follw">关注</string>
+    <string name="tab_me">我的</string>
+
+    <string name="tab_all">全部</string>
+
+    <string name="search">搜索</string>
+
+    <string name="press_again_to_exit">再按一次退出KingTV</string>
+
+    <string name="scoll_aware_fab_behavior">.view.ScollAwareFABBehavior</string>
+    
+    <!-- 房间内 -->
+    <string name="room_chat">聊天</string>
+    <string name="room_ranking">排行</string>
+    <string name="room_anchor">主播</string>
+    <string name="room_follow">关注</string>
+    <string name="hint_room_chat">和主播说点什么…</string>
+    <string name="tips_notice_desc">&#160;全民直播提倡绿色直播。封页和直播内容含吸烟，低俗，引诱，暴露等都将被封停账号。网警在线24小时巡查哦。</string>
+
+    <string name="account_">全民号：</string>
+    <string name="fans_">粉丝：</string>
+    <string name="zhandouli_">战斗力：</string>
+    <string name="l">|</string>
+    <string name="live_notice">直播公告</string>
+    <string name="start_live_time">开播时间</string>
+    <string name="personal_information">个人资料</string>
+    <string name="age">年龄</string>
+    <string name="emotional_state">情感状态</string>
+    <string name="location">所在地</string>
+    <string name="occupation">职业</string>
+    <string name="secrecy">保密</string>
+    <string name="outer_space">外太空</string>
+
+    <!-- 我的关注 -->
+    <string name="tips_current_not_login">当前未登录</string>
+    <string name="btn_follow_click_login">点击登录，精彩不再错过</string>
+
+    <!-- 我的 -->
+    <string name="btn_click_login">点击登录</string>
+    <string name="mine_follow">关注</string>
+    <string name="mine_fans">粉丝</string>
+    <string name="mine_recharge">充值</string>
+    <string name="mine_starlight">我的星光</string>
+    <string name="mine_contribution">星光贡献榜</string>
+    <string name="mine_watch">观看历史</string>
+    <string name="mine_level">我的等级</string>
+    <string name="mine_task">任务中心</string>
+    <string name="mine_game">游戏中心</string>
+    <string name="mine_setting">设置</string>
+
+    <!-- 登录 -->
+    <string name="login">登录</string>
+    <string name="signup">注册</string>
+    <string name="lable_username_number">用户名/手机号</string>
+    <string name="lable_password">密码</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="third_party_login">第三方登录</string>
+
+    <!-- 推荐 -->
+    <string name="recommend">推荐</string>
+    <string name="recommend_more">更多</string>
+
+
+    <string name="network_unavailable">网络状态不佳</string>
+    <string name="page_load_failed">加载失败…</string>
+    <string name="swipe_down_to_refresh">下拉刷新数据</string>
+
+    <string name="current_version_">KingTV %1$s</string>
+    <string name="about">关于</string>
+    <string name="author_">Author:</string>
+    <string name="email_">Email:</string>
+    <string name="csdn_">CSDN:</string>
+    <string name="github_">Github:</string>
+
+    <string name="author_jenly">Jenly</string>
+    <string name="email_jenly"><u>jenly1314@gmail.com</u></string>
+    <string name="csdn_jenly"><u>http://blog.csdn.net/jenly121</u></string>
+    <string name="github_jenly"><u>https://github.com/jenly1314</u></string>
+
+</resources>
