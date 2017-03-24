@@ -18,7 +18,18 @@
 ![QR_CODE](pictures/QR_KingTV.png)
 ####    下载地址：https://fir.im/KingTV
 
+## 关于我
+   Name: Jenly
 
+   Email: jenly1314@gmail.com / jenly1314@vip.qq.com
+
+   CSDN: http://www.csdn.net/jenly121
+
+   Github: https://github.com/jenly1314
+
+   微信公众号:
+
+   ![公众号](http://olambmg9j.bkt.clouddn.com/jenly666.jpg)
 
 ## 声明
-#####    本项目纯属个人作品，是高仿全民直播Android App 3.0.1版本，仅供技术参考，请维护全民直播平台的合法权益，禁止用于一切商业用途。如有疑问请联系作者，谢谢合作。
+####    本项目纯属个人作品，是高仿全民直播Android App 3.0.1版本，仅供技术参考，请维护全民直播平台的合法权益，禁止用于一切商业用途。如有疑问请联系作者，谢谢合作。
