@@ -1,7 +1,7 @@
 
 # KingTV
 [![Download](https://img.shields.io/badge/download-App-blue.svg)](https://raw.githubusercontent.com/jenly1314/KingsTV/master/app/app-release.apk)
-[![](https://jitpack.io/v/jenly1314/KingsTV.svg)](https://jitpack.io/#jenly1314/KingsTV)
+[![](https://jitpack.io/v/jenly1314/KingTV.svg)](https://jitpack.io/#jenly1314/KingTV)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 [![Blog](https://img.shields.io/badge/blog-Jenly-9933CC.svg)](http://blog.csdn.net/jenly121)
 
