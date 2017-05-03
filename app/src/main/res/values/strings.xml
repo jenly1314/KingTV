@@ -37,6 +37,8 @@
     <string name="occupation">职业</string>
     <string name="secrecy">保密</string>
     <string name="outer_space">外太空</string>
+    <string name="qm_account">全民号 %1$s</string>
+    <string name="fans_num">粉丝 %1$d</string>
 
     <!-- 我的关注 -->
     <string name="tips_current_not_login">当前未登录</string>

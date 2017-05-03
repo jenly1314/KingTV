@@ -55,7 +55,8 @@ public class LiveListPresenter extends BasePresenter<ILiveListView> {
 
                     @Override
                     public void onError(Throwable e) {
-                        getView().onError(e);
+                        if(isViewAttached())
+                            getView().onError(e);
                     }
 
                     @Override
@@ -90,7 +91,8 @@ public class LiveListPresenter extends BasePresenter<ILiveListView> {
 
                     @Override
                     public void onError(Throwable e) {
-                        getView().onError(e);
+                        if(isViewAttached())
+                            getView().onError(e);
                     }
 
                     @Override

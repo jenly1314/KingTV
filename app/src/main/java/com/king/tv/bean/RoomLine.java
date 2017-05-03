@@ -121,6 +121,16 @@ public class RoomLine {
         private int main_mobile;
         private int main_pc;
 
+        public StreamSrc getValue(){
+            if(value5!=null){
+                return value5;
+            }
+            if(value4!=null){
+                return value4;
+            }
+            return value3;
+        }
+
         public StreamSrc getValue3() {
             return value3;
         }
@@ -198,6 +208,17 @@ public class RoomLine {
         private StreamSrc value5;
         private int main_mobile;
         private int main_pc;
+
+
+        public StreamSrc getValue(){
+            if(value5!=null){
+                return value5;
+            }
+            if(value4!=null){
+                return value4;
+            }
+            return value3;
+        }
 
         public StreamSrc getValue3() {
             return value3;

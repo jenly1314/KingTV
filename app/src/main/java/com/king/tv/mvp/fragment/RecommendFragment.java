@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -104,14 +106,12 @@ public class RecommendFragment extends BaseFragment<IRecommendView, RecommendPre
             }
         });
 
-
     }
 
     private void clickBannerItem(Banner banner){
         if(banner!=null){
             if(banner.isRoom()){//如果是房间类型就点击进入房间
-                String uid = banner.getLink_object().getUid();
-                startRoom(uid);
+                startRoom(banner.getLink_object());
             }else{//广告类型
                 startWeb(banner.getTitle(),banner.getLink());
             }

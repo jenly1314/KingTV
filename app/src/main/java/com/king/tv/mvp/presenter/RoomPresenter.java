@@ -24,7 +24,8 @@ public class RoomPresenter extends BasePresenter<IRoomView> {
 
 
     public void enterRoom(String uid){
-        getView().showProgress();
+        if(isViewAttached())
+            getView().showProgress();
         getAppComponent().getAPIService()
                 .enterRoom(uid)
                 .subscribeOn(Schedulers.io())
@@ -32,29 +33,36 @@ public class RoomPresenter extends BasePresenter<IRoomView> {
                 .subscribe(new Observer<Room>() {
                     @Override
                     public void onCompleted() {
-                        getView().onCompleted();
+                        if(isViewAttached())
+                            getView().onCompleted();
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        getView().onError(e);
+                        if(isViewAttached())
+                            getView().onError(e);
                     }
 
                     @Override
                     public void onNext(Room room) {
                         LogUtils.d("Response:" + room);
-                        getView().enterRoom(room);
-                        String url = null;
+                        if(isViewAttached())
+                            getView().enterRoom(room);
+
                         if(room!= null){
+                            String url =null;
+//                            RoomLine roomLine = room.getRoom_lines().get(0);
                             RoomLine roomLine = room.getLive().getWs();
 
                             RoomLine.FlvBean flv = roomLine.getFlv();
+                            LogUtils.d("flv:" + flv);
                             if(flv!=null){
-                                url = flv.getValue3().getSrc();
+                                url = flv.getValue().getSrc();
                             }else{
-                                url = roomLine.getHls().getValue3().getSrc();
+                                url = roomLine.getHls().getValue().getSrc();
                             }
-                            getView().playUrl(url);
+                            if(isViewAttached())
+                                getView().playUrl(url);
                         }
 
                     }

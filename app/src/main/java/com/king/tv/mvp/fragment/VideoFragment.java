@@ -3,12 +3,14 @@ package com.king.tv.mvp.fragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.king.base.util.LogUtils;
 import com.king.tv.R;
 import com.king.tv.mvp.base.BaseFragment;
 import com.king.tv.mvp.base.BasePresenter;
 import com.king.tv.mvp.base.BaseView;
+import com.king.tv.util.DensityUtil;
 import com.pili.pldroid.player.PLMediaPlayer;
 import com.pili.pldroid.player.widget.PLVideoTextureView;
 import com.pili.pldroid.player.widget.PLVideoView;
@@ -30,12 +32,15 @@ public class VideoFragment extends BaseFragment<BaseView, BasePresenter<BaseView
 
     private String url;
 
-    public static VideoFragment newInstance(String url) {
+    private boolean isFull;
+
+    public static VideoFragment newInstance(String url,boolean isFull) {
 
         Bundle args = new Bundle();
 
         VideoFragment fragment = new VideoFragment();
         fragment.url = url;
+        fragment.isFull = isFull;
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,12 +54,15 @@ public class VideoFragment extends BaseFragment<BaseView, BasePresenter<BaseView
     public void initUI() {
         LogUtils.d("url:" + url);
         vtv.setVideoPath(url);
-        vtv.setDisplayOrientation(PLVideoView.ASPECT_RATIO_16_9);
+        if(isFull){
+            vtv.setDisplayOrientation(PLVideoView.ASPECT_RATIO_PAVED_PARENT);
+        }else{
+            vtv.setDisplayOrientation(PLVideoView.ASPECT_RATIO_16_9);
+        }
         vtv.setOnPreparedListener(new PLMediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(PLMediaPlayer plMediaPlayer) {
                 LogUtils.d("onPrepared:" + url);
-
                 start();
             }
         });
@@ -98,14 +106,17 @@ public class VideoFragment extends BaseFragment<BaseView, BasePresenter<BaseView
     }
 
     private void start(){
-        vtv.start();
+        if(vtv!=null)
+            vtv.start();
     }
     public void pause(){
-        vtv.pause();
+        if(vtv!=null)
+            vtv.pause();
     }
 
     public void stopPlayback(){
-        vtv.stopPlayback();
+        if(vtv!=null)
+            vtv.stopPlayback();
 
     }
 

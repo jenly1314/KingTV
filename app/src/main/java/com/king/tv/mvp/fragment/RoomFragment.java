@@ -99,9 +99,6 @@ public class RoomFragment extends BaseFragment<IRoomView, RoomPresenter> impleme
     }
 
 
-
-
-
     @Override
     public int getRootViewId() {
         return R.layout.fragment_room;
@@ -150,9 +147,9 @@ public class RoomFragment extends BaseFragment<IRoomView, RoomPresenter> impleme
     public void updateVideoLayoutParams(){
         ViewGroup.LayoutParams lp = videoContent.getLayoutParams();
         if(isLandscape()){
-            lp.height = (int) (DensityUtil.getDisplayMetrics(context).heightPixels);
+            lp.height = DensityUtil.getDisplayMetrics(context).heightPixels;
         }else{
-            lp.height = (int) (DensityUtil.getDisplayMetrics(context).widthPixels / 16.0f * 9.0f);
+            lp.height = (int)(DensityUtil.getDisplayMetrics(context).widthPixels / 16.0f * 9.0f);
         }
 
         videoContent.setLayoutParams(lp);
@@ -180,9 +177,9 @@ public class RoomFragment extends BaseFragment<IRoomView, RoomPresenter> impleme
     public void playUrl(String url) {
         LogUtils.d("playUrl:" + url);
         if (videoFragment == null) {
-            videoFragment = VideoFragment.newInstance(url);
+            videoFragment = VideoFragment.newInstance(url,false);
         }
-        replaceFragment(R.id.frameVideo, videoFragment);
+        replaceChildFragment(R.id.frameVideo, videoFragment);
     }
 
     @Override

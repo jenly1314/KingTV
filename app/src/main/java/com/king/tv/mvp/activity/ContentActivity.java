@@ -10,6 +10,7 @@ import com.king.base.util.LogUtils;
 import com.king.tv.Constants;
 import com.king.tv.R;
 import com.king.tv.mvp.fragment.AboutFragment;
+import com.king.tv.mvp.fragment.FullRoomFragment;
 import com.king.tv.mvp.fragment.LiveFragment;
 import com.king.tv.mvp.fragment.LoginFragment;
 import com.king.tv.mvp.fragment.RoomFragment;
@@ -52,6 +53,11 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case Constants.ABOUT_FRAGMENT:
                 replaceFragment(AboutFragment.newInstance());
+                break;
+            case Constants.FULL_ROOM_FRAGMENT:
+                String uid = intent.getStringExtra(Constants.KEY_UID);
+                String cover = intent.getStringExtra(Constants.KEY_COVER);
+                replaceFragment(FullRoomFragment.newInstance(uid,cover));
                 break;
             default:
                 LogUtils.d("Not found fragment:" + Integer.toHexString(fragmentKey));

@@ -443,6 +443,11 @@ public class LiveInfoDao extends AbstractDao<LiveInfo, Void> {
         if (category_slug != null) {
             stmt.bindString(35, category_slug);
         }
+
+        String love_cover = entity.getLove_cover();
+        if (love_cover != null) {
+            stmt.bindString(36, love_cover);
+        }
     }
 
     @Override
@@ -487,7 +492,8 @@ public class LiveInfoDao extends AbstractDao<LiveInfo, Void> {
             cursor.getShort(offset + 31) != 0, // hidden
             cursor.getShort(offset + 32) != 0, // play_status
             cursor.isNull(offset + 33) ? null : cursor.getString(offset + 33), // icontext
-            cursor.isNull(offset + 34) ? null : cursor.getString(offset + 34) // category_slug
+            cursor.isNull(offset + 34) ? null : cursor.getString(offset + 34), // category_slug
+            cursor.isNull(offset + 35) ? null : cursor.getString(offset + 35) // love_conver
         );
         return entity;
     }
@@ -529,6 +535,7 @@ public class LiveInfoDao extends AbstractDao<LiveInfo, Void> {
         entity.setPlay_status(cursor.getShort(offset + 32) != 0);
         entity.setIcontext(cursor.isNull(offset + 33) ? null : cursor.getString(offset + 33));
         entity.setCategory_slug(cursor.isNull(offset + 34) ? null : cursor.getString(offset + 34));
+        entity.setLove_cover(cursor.isNull(offset + 35) ? null : cursor.getString(offset + 35));
      }
     
     @Override

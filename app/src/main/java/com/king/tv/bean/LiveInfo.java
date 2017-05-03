@@ -45,6 +45,7 @@ public class LiveInfo {
     private boolean play_status;
     private String icontext;
     private String category_slug;
+    private String love_cover;
 
     public LiveInfo(String no, String nick, String avatar, int follow, String id,
             String uid, String title, String category_id, String slug, String intro,
@@ -54,7 +55,7 @@ public class LiveInfo {
             String videoQuality, String category_name, int screen,
             String start_time, String stream, String thumb, String video,
             String app_shuffling_image, String categoryId, boolean hidden,
-            boolean play_status, String icontext, String category_slug) {
+            boolean play_status, String icontext, String category_slug,String love_cover) {
         this.no = no;
         this.nick = nick;
         this.avatar = avatar;
@@ -90,6 +91,7 @@ public class LiveInfo {
         this.play_status = play_status;
         this.icontext = icontext;
         this.category_slug = category_slug;
+        this.love_cover = love_cover;
     }
 
     public LiveInfo() {
@@ -396,6 +398,14 @@ public class LiveInfo {
         return this.play_status;
     }
 
+    public String getLove_cover() {
+        return love_cover;
+    }
+
+    public void setLove_cover(String love_cover) {
+        this.love_cover = love_cover;
+    }
+
     @Override
     public String toString() {
         return "LiveInfo{" +
@@ -434,6 +444,7 @@ public class LiveInfo {
                 ", play_status=" + play_status +
                 ", icontext='" + icontext + '\'' +
                 ", category_slug='" + category_slug + '\'' +
+                ", love_cover='" + love_cover + '\'' +
                 '}';
     }
 }

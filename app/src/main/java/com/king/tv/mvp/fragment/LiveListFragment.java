@@ -88,7 +88,8 @@ public class LiveListFragment extends BaseFragment<ILiveListView, LiveListPresen
         easyLiveAdapter.setOnItemClickListener(new RecyclerArrayAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                startRoom(easyLiveAdapter.getItem(position).getUid());
+
+                startRoom(easyLiveAdapter.getItem(position));
             }
         });
     }

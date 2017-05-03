@@ -37,13 +37,15 @@ public class CategoryPresenter extends BasePresenter<ICategoryView> {
                 .subscribe(new Observer<List<LiveCategory>>() {
                     @Override
                     public void onCompleted() {
-                        getView().onCompleted();
+                        if(isViewAttached())
+                            getView().onCompleted();
 
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        getView().onError(e);
+                        if(isViewAttached())
+                            getView().onError(e);
                     }
 
                     @Override
@@ -56,8 +58,8 @@ public class CategoryPresenter extends BasePresenter<ICategoryView> {
                                 getDaoSession().getLiveCategoryDao().insertOrReplaceInTx(list);
                             }
                         });
-
-                        getView().onGetLiveCategory(list);
+                        if(isViewAttached())
+                            getView().onGetLiveCategory(list);
 
                     }
                 });

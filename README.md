@@ -18,6 +18,15 @@
 ![QR_CODE](pictures/QR_KingTV.png)
 ####    下载地址：https://fir.im/KingTV
 
+## 版本记录
+
+#### 2017-5-3    v1.1
+*  新增Showing类型竖屏播放支持
+*  优化播放的流地址逻辑
+
+#### 2017-3-23    v1.0
+*  初始化版本，完成主要核心功能
+
 ## 关于我
    Name: Jenly
 

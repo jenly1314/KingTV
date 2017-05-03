@@ -22,6 +22,12 @@ public final class Constants {
 
     public static final String KEY_URL = "key_url";
 
+    public static final String KEY_COVER = "key_cover";
+
+    /**
+     * showing
+     */
+    public static final String SHOWING = "showing";
 
 
     //-----------------------------------------
@@ -32,5 +38,6 @@ public final class Constants {
     public static final int WEB_FRAGMENT = 0X03;
     public static final int LOGIN_FRAGMENT = 0X04;
     public static final int ABOUT_FRAGMENT = 0X05;
+    public static final int FULL_ROOM_FRAGMENT = 0X06;
 
 }

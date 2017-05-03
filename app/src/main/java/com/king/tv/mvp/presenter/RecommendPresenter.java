@@ -35,21 +35,25 @@ public class RecommendPresenter extends BasePresenter<IRecommendView> {
                 .subscribe(new Subscriber<Recommend>() {
                     @Override
                     public void onCompleted() {
-                        getView().onCompleted();
+                        if(isViewAttached())
+                            getView().onCompleted();
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        getView().onError(e);
+                        if(isViewAttached())
+                            getView().onError(e);
                     }
 
                     @Override
                     public void onNext(Recommend recommend) {
                         LogUtils.d("Response:"+ recommend);
-                        getView().onGetRecommend(recommend);
+                        if(isViewAttached())
+                            getView().onGetRecommend(recommend);
 
                         if(recommend!=null){
-                            getView().onGetRooms(recommend.getRoom());
+                            if(isViewAttached())
+                                getView().onGetRooms(recommend.getRoom());
                         }
                     }
                 });
@@ -74,7 +78,8 @@ public class RecommendPresenter extends BasePresenter<IRecommendView> {
                     @Override
                     public void onNext(AppStart appStart) {
                         if(appStart!=null){
-                            getView().onGetBanner(appStart.getBanners());
+                            if(isViewAttached())
+                                getView().onGetBanner(appStart.getBanners());
                         }
                     }
 

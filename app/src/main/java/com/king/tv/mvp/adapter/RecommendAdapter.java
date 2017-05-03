@@ -7,6 +7,7 @@ import android.support.annotation.LayoutRes;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -21,6 +22,7 @@ import com.jude.easyrecyclerview.decoration.SpaceDecoration;
 import com.king.base.adapter.HolderRecyclerAdapter;
 import com.king.tv.Constants;
 import com.king.tv.R;
+import com.king.tv.bean.LiveInfo;
 import com.king.tv.bean.Recommend;
 import com.king.tv.mvp.activity.ContentActivity;
 import com.king.tv.util.DensityUtil;
@@ -70,13 +72,12 @@ public class RecommendAdapter extends RecyclerArrayAdapter<Recommend.RoomBean> {
 //            gridLayoutManager.setSpanSizeLookup(recommendAdapter.obtainGridSpanSizeLookUp(2));
             recyclerView.setLayoutManager(gridLayoutManager);
             recyclerView.setAdapter(adapter);
-
             adapter.setOnItemClicklistener(new HolderRecyclerAdapter.OnItemClicklistener() {
                 @Override
                 public void onItemClick(View v, int position) {
                     //-1去掉头部位置
-                    String uid = String.valueOf(getAllData().get(getAdapterPosition()-1).getList().get(position).getUid());
-                    startRoom(getContext(),uid);
+                    Recommend.RoomBean.ListBean listBean = getAllData().get(getAdapterPosition()-1).getList().get(position);
+                    startRoom(getContext(),listBean);
                 }
             });
 
@@ -90,10 +91,15 @@ public class RecommendAdapter extends RecyclerArrayAdapter<Recommend.RoomBean> {
             context.startActivity(intent);
         }
 
-        public void startRoom(Context context,String uid){
+        public void startRoom(Context context,Recommend.RoomBean.ListBean listBean){
             Intent intent = new Intent(context, ContentActivity.class);
-            intent.putExtra(Constants.KEY_FRAGMENT,Constants.ROOM_FRAGMENT);
-            intent.putExtra(Constants.KEY_UID,uid);
+            int fragmentKey = Constants.ROOM_FRAGMENT;
+            if(Constants.SHOWING.equalsIgnoreCase(listBean.getCategory_slug())){
+                fragmentKey = Constants.FULL_ROOM_FRAGMENT;
+            }
+            intent.putExtra(Constants.KEY_FRAGMENT,fragmentKey);
+            intent.putExtra(Constants.KEY_UID,String.valueOf(listBean.getUid()));
+            intent.putExtra(Constants.KEY_COVER,listBean.getThumb());
             context.startActivity(intent);
         }
 

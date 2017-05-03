@@ -17,6 +17,7 @@ import com.king.base.util.LogUtils;
 import com.king.tv.App;
 import com.king.tv.Constants;
 import com.king.tv.R;
+import com.king.tv.bean.LiveInfo;
 import com.king.tv.mvp.activity.ContentActivity;
 
 import org.greenrobot.eventbus.EventBus;
@@ -26,6 +27,7 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.util.List;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * @author Jenly <a href="mailto:jenly1314@gmail.com">Jenly</a>
@@ -34,10 +36,11 @@ import butterknife.ButterKnife;
 
 public abstract class BaseFragment<V extends BaseView, P extends BasePresenter<V>>  extends MvpFragment<V,P>{
 
-
     protected Context context;
 
     private View rootView;
+
+    private Unbinder mUnbinder;
 
     public <T extends View> T findView(@IdRes int id){
         return (T)rootView.findViewById(id);
@@ -50,12 +53,17 @@ public abstract class BaseFragment<V extends BaseView, P extends BasePresenter<V
 
         context = getActivity();
         rootView = inflater.inflate(getRootViewId(),container,false);
-        ButterKnife.bind(this,rootView);
+        mUnbinder = ButterKnife.bind(this,rootView);
         LogUtils.d("onCreateView");
         initUI();
         return rootView;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mUnbinder.unbind();
+    }
 
     public View getRootView(){
         return rootView;
@@ -69,6 +77,10 @@ public abstract class BaseFragment<V extends BaseView, P extends BasePresenter<V
 
     public void replaceFragment(@IdRes int id, Fragment fragment) {
         getFragmentManager().beginTransaction().replace(id, fragment).commit();
+    }
+
+    public void replaceChildFragment(@IdRes int id, Fragment fragment) {
+        getChildFragmentManager().beginTransaction().replace(id, fragment).commit();
     }
 
     public App getApp(){
@@ -139,9 +151,15 @@ public abstract class BaseFragment<V extends BaseView, P extends BasePresenter<V
         startActivity(intent);
     }
 
-    protected void startRoom(String uid){
-        Intent intent = getFragmentIntent(Constants.ROOM_FRAGMENT);
-        intent.putExtra(Constants.KEY_UID,uid);
+    protected void startRoom(LiveInfo liveInfo){
+
+        int fragmentKey = Constants.ROOM_FRAGMENT;
+        if(Constants.SHOWING.equalsIgnoreCase(liveInfo.getCategory_slug())){
+            fragmentKey = Constants.FULL_ROOM_FRAGMENT;
+        }
+        Intent intent = getFragmentIntent(fragmentKey);
+        intent.putExtra(Constants.KEY_UID,liveInfo.getUid());
+        intent.putExtra(Constants.KEY_COVER,liveInfo.getThumb());
         startActivity(intent);
     }
 

@@ -81,7 +81,7 @@ public class HomeFragment extends BaseFragment<ICategoryView, CategoryPresenter>
 //        listTitle.add(getText(R.string.tab_all));
 //        listData.add(LiveListFragment.newInstance(null));
 
-        viewPagerFragmentAdapter = new ViewPagerFragmentAdapter(getFragmentManager(),listData,listTitle);
+        viewPagerFragmentAdapter = new ViewPagerFragmentAdapter(getChildFragmentManager(),listData,listTitle);
 
         viewPager.setAdapter(viewPagerFragmentAdapter);
 
