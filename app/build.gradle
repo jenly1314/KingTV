@@ -11,8 +11,8 @@ android {
         applicationId "com.king.tv"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         ndk {
@@ -30,7 +30,7 @@ android {
 }
 
 greendao{
-    schemaVersion 1
+    schemaVersion 2
     targetGenDir 'src/main/java'
     daoPackage 'com.king.tv.dao.greendao'
 }
@@ -40,7 +40,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.1.+'
+    compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:design:24.2.+'
     compile 'com.android.support:cardview-v7:24.1.+'
     testCompile 'junit:junit:4.12'
@@ -64,6 +64,7 @@ dependencies {
     provided 'org.greenrobot:greendao-generator:3.2.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.king.base:base:2.0'
+    compile 'com.king.view:flutteringlayout:1.1.0'
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'com.qiniu:happy-dns:0.2.+'
     //optional, help to generate the final applicatio
