@@ -61,7 +61,7 @@ public class LiveFragment extends BaseFragment<BaseView,BasePresenter<BaseView>>
             ivLeft.setImageResource(R.drawable.btn_back_selector);
             ivRight.setVisibility(View.INVISIBLE);
         }
-        replaceFragment(R.id.fragment,LiveListFragment.newInstance(slug));
+        replaceChildFragment(R.id.fragment,LiveListFragment.newInstance(slug));
     }
 
     @Override
