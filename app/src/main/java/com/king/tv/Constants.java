@@ -39,5 +39,6 @@ public final class Constants {
     public static final int LOGIN_FRAGMENT = 0X04;
     public static final int ABOUT_FRAGMENT = 0X05;
     public static final int FULL_ROOM_FRAGMENT = 0X06;
+    public static final int SEARCH_FRAGMENT = 0X07;
 
 }

@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_tips_no_data"/>
     <TextView
+        android:id="@+id/tvEmpty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="6dp"

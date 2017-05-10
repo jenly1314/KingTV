@@ -1,12 +1,12 @@
 package com.king.tv.mvp.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.king.base.util.ToastUtils;
+import com.king.tv.Constants;
 import com.king.tv.R;
 import com.king.tv.mvp.base.BaseFragment;
 import com.king.tv.mvp.base.BasePresenter;
@@ -71,8 +71,7 @@ public class LiveFragment extends BaseFragment<BaseView,BasePresenter<BaseView>>
 
     private void clickLeft(){
         if(isTabLive){
-            //TODO: Click Search
-            ToastUtils.showToast(context,R.string.search);
+            startActivity(getFragmentIntent(Constants.SEARCH_FRAGMENT));
         }else{
             finish();
         }

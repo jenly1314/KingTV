@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.king.base.util.ToastUtils;
+import com.king.tv.Constants;
 import com.king.tv.R;
 
 import butterknife.BindView;
@@ -55,7 +56,7 @@ public class FollowFragment extends SimpleFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ivLeft:
-                ToastUtils.showToast(context,R.string.search);
+                startActivity(getFragmentIntent(Constants.SEARCH_FRAGMENT));
                 break;
             case R.id.ivRight:
                 startLogin();

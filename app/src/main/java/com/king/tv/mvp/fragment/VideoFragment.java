@@ -69,7 +69,8 @@ public class VideoFragment extends BaseFragment<BaseView, BasePresenter<BaseView
         vtv.setOnBufferingUpdateListener(new PLMediaPlayer.OnBufferingUpdateListener() {
             @Override
             public void onBufferingUpdate(PLMediaPlayer plMediaPlayer, int i) {
-                LogUtils.d("onBufferingUpdate|" + i);
+                if(i>0)
+                    LogUtils.d("onBufferingUpdate|" + i);
             }
         });
         vtv.setOnCompletionListener(new PLMediaPlayer.OnCompletionListener() {

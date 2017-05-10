@@ -121,12 +121,15 @@ public class RoomLine {
         private int main_mobile;
         private int main_pc;
 
-        public StreamSrc getValue(){
-            if(value5!=null){
+        public StreamSrc getValue(boolean isShowing){
+            if(isShowing && value5!=null){
                 return value5;
             }
             if(value4!=null){
                 return value4;
+            }
+            if(value5!=null){
+                return value5;
             }
             return value3;
         }
@@ -210,12 +213,15 @@ public class RoomLine {
         private int main_pc;
 
 
-        public StreamSrc getValue(){
-            if(value5!=null){
+        public StreamSrc getValue(boolean isShowing){
+            if(isShowing && value5!=null){
                 return value5;
             }
             if(value4!=null){
                 return value4;
+            }
+            if(value5!=null){
+                return value5;
             }
             return value3;
         }

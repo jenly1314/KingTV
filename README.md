@@ -20,6 +20,10 @@
 
 ## 版本记录
 
+#### 2017-5-10    v1.2
+*  新增搜索功能
+*  集成[NeverCrash](https://github.com/jenly1314/NeverCrash)
+
 #### 2017-5-3    v1.1
 *  新增Showing类型竖屏播放支持
 *  优化播放的流地址逻辑

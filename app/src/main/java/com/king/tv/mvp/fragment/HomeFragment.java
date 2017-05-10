@@ -1,6 +1,7 @@
 package com.king.tv.mvp.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 
 import com.king.base.adapter.ViewPagerFragmentAdapter;
 import com.king.base.util.ToastUtils;
+import com.king.tv.Constants;
 import com.king.tv.R;
 import com.king.tv.bean.LiveCategory;
 import com.king.tv.mvp.base.BaseFragment;
@@ -153,11 +155,12 @@ public class HomeFragment extends BaseFragment<ICategoryView, CategoryPresenter>
 
     }
 
+
     @OnClick({R.id.ivLeft, R.id.ivRight, R.id.btnMore,R.id.fab})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ivLeft:
-                ToastUtils.showToast(context,R.string.search);
+                startActivity(getFragmentIntent(Constants.SEARCH_FRAGMENT));
                 break;
             case R.id.ivRight:
                 startLogin();

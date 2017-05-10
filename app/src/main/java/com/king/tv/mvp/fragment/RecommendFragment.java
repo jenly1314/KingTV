@@ -219,7 +219,7 @@ public class RecommendFragment extends BaseFragment<IRecommendView, RecommendPre
     }
 
     @Override
-    public void onGetRecommend(Recommend recommend) {
+        public void onGetRecommend(Recommend recommend) {
 
     }
 

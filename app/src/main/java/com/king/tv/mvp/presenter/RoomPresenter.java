@@ -22,8 +22,11 @@ public class RoomPresenter extends BasePresenter<IRoomView> {
         super(app);
     }
 
-
     public void enterRoom(String uid){
+        enterRoom(uid,false);
+    }
+
+    public void enterRoom(String uid,final boolean isShowing){
         if(isViewAttached())
             getView().showProgress();
         getAppComponent().getAPIService()
@@ -57,9 +60,9 @@ public class RoomPresenter extends BasePresenter<IRoomView> {
                             RoomLine.FlvBean flv = roomLine.getFlv();
                             LogUtils.d("flv:" + flv);
                             if(flv!=null){
-                                url = flv.getValue().getSrc();
+                                url = flv.getValue(isShowing).getSrc();
                             }else{
-                                url = roomLine.getHls().getValue().getSrc();
+                                url = roomLine.getHls().getValue(isShowing).getSrc();
                             }
                             if(isViewAttached())
                                 getView().playUrl(url);

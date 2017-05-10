@@ -2,6 +2,7 @@ package com.king.tv.mvp.adapter;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,8 +23,11 @@ import java.util.List;
 
 public class EasyLiveAdapter extends RecyclerArrayAdapter<LiveInfo> {
 
-    public EasyLiveAdapter(Context context, List<LiveInfo> objects) {
+    private boolean isShowStatus;
+
+    public EasyLiveAdapter(Context context, List<LiveInfo> objects,boolean isShowStatus) {
         super(context, objects);
+        this.isShowStatus = isShowStatus;
     }
 
     @Override
@@ -36,6 +40,7 @@ public class EasyLiveAdapter extends RecyclerArrayAdapter<LiveInfo> {
 
         ImageView iv;
         TextView tvTitle;
+        TextView tvStatus;
         TextView tvName;
         TextView tvViewer;
 
@@ -45,6 +50,7 @@ public class EasyLiveAdapter extends RecyclerArrayAdapter<LiveInfo> {
 
             iv = $(R.id.iv);
             tvTitle = $(R.id.tvTitle);
+            tvStatus = $(R.id.tvStatus);
             tvName = $(R.id.tvName);
             tvViewer = $(R.id.tvViewer);
         }
@@ -58,6 +64,14 @@ public class EasyLiveAdapter extends RecyclerArrayAdapter<LiveInfo> {
             tvTitle.setText(data.getTitle());
             tvName.setText(data.getNick());
             tvViewer.setText(data.getViews());
+
+            if(isShowStatus){
+                if(data.getPlay_status()){
+                    tvStatus.setVisibility(View.VISIBLE);
+                }else{
+                    tvStatus.setVisibility(View.GONE);
+                }
+            }
 
         }
     }

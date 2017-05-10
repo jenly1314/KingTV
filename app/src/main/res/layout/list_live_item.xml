@@ -10,7 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="100dp"
+        android:scaleType="centerCrop"
         android:src="@mipmap/live_default"/>
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv"
+        android:background="@drawable/ic_history_islive"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="10sp"
+        android:text="@string/islive"
+        android:visibility="gone"/>
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"

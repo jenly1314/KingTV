@@ -3,19 +3,29 @@ package com.king.tv.http;
 import com.king.tv.bean.AppStart;
 import com.king.tv.bean.LiveCategory;
 import com.king.tv.bean.LiveListResult;
+import com.king.tv.bean.P;
 import com.king.tv.bean.Recommend;
 import com.king.tv.bean.Room;
+import com.king.tv.bean.SearchRequestBody;
+import com.king.tv.bean.SearchResult;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Callback;
+import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.Headers;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 import rx.Observable;
 
 /**
@@ -67,5 +77,12 @@ public interface APIService {
     @GET("json/rooms/{uid}/info.json?v=3.0.1&os=1&ver=4")
     Observable<Room> enterRoom(@Path("uid")String uid);
 
+    /**
+     * 搜索
+     * @param searchRequestBody
+     * @return
+     */
+    @POST("site/search")
+    Observable<SearchResult> search(@Body SearchRequestBody searchRequestBody);
 
 }

@@ -62,7 +62,8 @@ public abstract class BaseFragment<V extends BaseView, P extends BasePresenter<V
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mUnbinder.unbind();
+        if(mUnbinder!=null)
+            mUnbinder.unbind();
     }
 
     public View getRootView(){

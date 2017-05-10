@@ -69,7 +69,13 @@
     <string name="recommend">推荐</string>
     <string name="recommend_more">更多</string>
 
+    <!-- 搜索 -->
+    <string name="hint_search">请输入主播昵称或全民号</string>
+    <string name="tips_search_keywords_cannot_be_empty">搜索关键字不能为空</string>
+    <string name="islive">正在直播</string>
 
+    <string name="can_not_find_relevant_content">找不到你想要的内容，换个关键词试试！</string>
+    <string name="no_more">没有更多了</string>
     <string name="network_unavailable">网络状态不佳</string>
     <string name="page_load_failed">加载失败…</string>
     <string name="swipe_down_to_refresh">下拉刷新数据</string>

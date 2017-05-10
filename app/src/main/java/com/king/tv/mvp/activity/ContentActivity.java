@@ -14,6 +14,7 @@ import com.king.tv.mvp.fragment.FullRoomFragment;
 import com.king.tv.mvp.fragment.LiveFragment;
 import com.king.tv.mvp.fragment.LoginFragment;
 import com.king.tv.mvp.fragment.RoomFragment;
+import com.king.tv.mvp.fragment.SearchFragment;
 import com.king.tv.mvp.fragment.WebFragment;
 
 /**
@@ -58,6 +59,9 @@ public class ContentActivity extends AppCompatActivity {
                 String uid = intent.getStringExtra(Constants.KEY_UID);
                 String cover = intent.getStringExtra(Constants.KEY_COVER);
                 replaceFragment(FullRoomFragment.newInstance(uid,cover));
+                break;
+            case Constants.SEARCH_FRAGMENT:
+                replaceFragment(SearchFragment.newInstance());
                 break;
             default:
                 LogUtils.d("Not found fragment:" + Integer.toHexString(fragmentKey));

@@ -113,7 +113,7 @@ public class FullRoomFragment extends BaseFragment<IRoomView, RoomPresenter> imp
 
     @Override
     public void initData() {
-        getPresenter().enterRoom(uid);
+        getPresenter().enterRoom(uid,true);
     }
 
 
