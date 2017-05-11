@@ -44,6 +44,7 @@ public class ContentActivity extends AppCompatActivity {
                 String slug = intent.getStringExtra(Constants.KEY_SLUG);
                 boolean isTabLive = intent.getBooleanExtra(Constants.KEY_IS_TAB_LIVE, false);
                 replaceFragment(LiveFragment.newInstance(title, slug, isTabLive));
+                break;
             }case Constants.WEB_FRAGMENT: {
                 String title = intent.getStringExtra(Constants.KEY_TITLE);
                 String url = intent.getStringExtra(Constants.KEY_URL);
