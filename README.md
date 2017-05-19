@@ -43,6 +43,9 @@
    微信公众号:
 
    ![公众号](http://olambmg9j.bkt.clouddn.com/jenly666.jpg)
+   
+   加入QQ群: [20867961](http://shang.qq.com/wpa/qunwpa?idkey=8fcc6a2f88552ea44b1411582c94fd124f7bb3ec227e2a400dbbfaad3dc2f5ad)
+   
 
 ## 声明
 ####    本项目纯属个人作品，是高仿全民直播Android App 3.0.1版本，仅供技术参考，请维护全民直播平台的合法权益，禁止用于一切商业用途。如有疑问请联系作者，谢谢合作。
