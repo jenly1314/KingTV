@@ -65,9 +65,9 @@ public class RecommendFragment extends BaseFragment<IRecommendView, RecommendPre
     private List<Banner> listBanner;
 
     public static RecommendFragment newInstance() {
-        
+
         Bundle args = new Bundle();
-        
+
         RecommendFragment fragment = new RecommendFragment();
         fragment.setArguments(args);
         return fragment;
@@ -180,8 +180,8 @@ public class RecommendFragment extends BaseFragment<IRecommendView, RecommendPre
                     return new ImageHolder();
                 }
             },listBanner)
-            .setPageIndicator(new int[]{R.drawable.ic_dot_normal,R.drawable.ic_dot_pressed})
-            .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
+                    .setPageIndicator(new int[]{R.drawable.ic_dot_normal,R.drawable.ic_dot_pressed})
+                    .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
 
             if(!convenientBanner.isTurning()){
                 convenientBanner.startTurning(4000);
@@ -219,13 +219,14 @@ public class RecommendFragment extends BaseFragment<IRecommendView, RecommendPre
     }
 
     @Override
-        public void onGetRecommend(Recommend recommend) {
+    public void onGetRecommend(Recommend recommend) {
 
     }
 
     @Override
     public void onGetRooms(List<Recommend.RoomBean> list) {
 //        toSetList(listData,list,false);
+        recommendAdapter.clear();
         recommendAdapter.addAll(list);
         recommendAdapter.notifyDataSetChanged();
         if(recommendAdapter.getCount()==0){
