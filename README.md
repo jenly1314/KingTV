@@ -31,21 +31,31 @@
 #### 2017-3-23    v1.0
 *  初始化版本，完成主要核心功能
 
-## 关于我
-   Name: Jenly
-
-   Email: jenly1314@gmail.com / jenly1314@vip.qq.com
-
-   CSDN: http://blog.csdn.net/jenly121
-
-   Github: https://github.com/jenly1314
-
-   微信公众号:
-
-   ![公众号](http://olambmg9j.bkt.clouddn.com/jenly666.jpg)
-   
-   加入QQ群: [20867961](http://shang.qq.com/wpa/qunwpa?idkey=8fcc6a2f88552ea44b1411582c94fd124f7bb3ec227e2a400dbbfaad3dc2f5ad)
-   
-
 ## 声明
 ####    本项目纯属个人作品，是高仿全民直播Android App 3.0.1版本，仅供技术参考，请维护全民直播平台的合法权益，禁止用于一切商业用途。如有疑问请联系作者，谢谢合作。
+
+## 赞赏
+如果您喜欢KingTV，或感觉KingTV帮助到了您，可以点右上角“Star”支持一下，您的支持就是我的动力，谢谢 :smiley:<p>
+也可以扫描下面的二维码，请作者喝杯咖啡 :coffee:
+    <div>
+        <img src="https://image-1252383324.cos.ap-guangzhou.myqcloud.com/pay/wxpay.png" width="280" heght="350">
+        <img src="https://image-1252383324.cos.ap-guangzhou.myqcloud.com/pay/alipay.png" width="280" heght="350">
+        <img src="https://image-1252383324.cos.ap-guangzhou.myqcloud.com/pay/qqpay.png" width="280" heght="350">
+    </div>
+
+## 关于我
+   Name: <a title="关于作者" href="https://about.me/jenly1314" target="_blank">Jenly</a>
+
+   Email: <a title="欢迎邮件与我交流" href="mailto:jenly1314@gmail.com" target="_blank">jenly1314#gmail.com</a> / <a title="给我发邮件" href="mailto:jenly1314@vip.qq.com" target="_blank">jenly1314#vip.qq.com</a>
+
+   CSDN: <a title="CSDN博客" href="http://blog.csdn.net/jenly121" target="_blank">jenly121</a>
+
+   Github: <a title="Github开源项目" href="https://github.com/jenly1314" target="_blank">jenly1314</a>
+
+   加入QQ群: <a title="点击加入QQ群" href="http://shang.qq.com/wpa/qunwpa?idkey=8fcc6a2f88552ea44b1411582c94fd124f7bb3ec227e2a400dbbfaad3dc2f5ad" target="_blank">20867961</a>
+   <div>
+       <img src="https://image-1252383324.cos.ap-guangzhou.myqcloud.com/jenly666.png">
+       <img src="https://image-1252383324.cos.ap-guangzhou.myqcloud.com/qqgourp.png">
+   </div>
+
+
