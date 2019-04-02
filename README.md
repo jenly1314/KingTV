@@ -1,9 +1,10 @@
 
 # KingTV
 [![Download](https://img.shields.io/badge/download-App-blue.svg)](https://raw.githubusercontent.com/jenly1314/KingsTV/master/app/app-release.apk)
-[![](https://jitpack.io/v/jenly1314/KingTV.svg)](https://jitpack.io/#jenly1314/KingTV)
+[![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=15)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 [![Blog](https://img.shields.io/badge/blog-Jenly-9933CC.svg)](http://blog.csdn.net/jenly121)
+[![QQGroup](https://img.shields.io/badge/QQGroup-20867961-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=8fcc6a2f88552ea44b1411582c94fd124f7bb3ec227e2a400dbbfaad3dc2f5ad)
 
 ####    本App 采用 MVP + RXJava + Retrofit + OKHttp + Material Design + Dagger2 + Base + Glide + GreenDao构建，高仿全民直播Android App,欢迎大家Star或Fork。
 
