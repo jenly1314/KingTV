@@ -3,14 +3,14 @@
 [![Download](https://img.shields.io/badge/download-App-blue.svg)](https://raw.githubusercontent.com/jenly1314/KingsTV/master/app/app-release.apk)
 [![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=15)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
-[![Blog](https://img.shields.io/badge/blog-Jenly-9933CC.svg)](http://blog.csdn.net/jenly121)
 
-####    本App 采用 MVP + RXJava + Retrofit + OKHttp + Material Design + Dagger2 + Base + Glide + GreenDao构建，高仿全民直播Android App,欢迎大家Star或Fork。
+本App 采用 MVP + RXJava + Retrofit + OKHttp + Material Design + Dagger2 + Base + Glide + GreenDao构建，高仿全民直播Android App,欢迎大家Star或Fork。
 
 ## Gif展示
 
 ![Image](pictures/gif.gif)
-###### 录制的gif效果有点不清晰，可以[下载App](https://raw.githubusercontent.com/jenly1314/KingsTV/master/app/app-release.apk)查看详情。
+
+> 录制的gif效果有点不清晰，可以直接[下载App](https://raw.githubusercontent.com/jenly1314/KingsTV/master/app/app-release.apk)体验效果。
 
 ## 版本记录
 
@@ -29,8 +29,8 @@
 ####    本项目纯属个人作品，是高仿全民直播Android App 3.0.1版本，仅供技术参考，请维护全民直播平台的合法权益，禁止用于一切商业用途。如有疑问请联系作者，谢谢合作。
 
 ## 赞赏
-如果您喜欢KingTV，或感觉KingTV帮助到了您，可以点右上角“Star”支持一下，您的支持就是我的动力，谢谢 :smiley:<p>
-您也可以扫描下面的二维码，请作者喝杯咖啡 :coffee:
+如果您喜欢KingTV，或感觉KingTV帮助到了您，可以点右上角“Star”支持一下，您的支持就是我的动力，谢谢 :smiley:
+<p>您也可以扫描下面的二维码，请作者喝杯咖啡 :coffee:
 <div>
    <img src="https://jenly1314.github.io/image/page/rewardcode.png">
 </div>
